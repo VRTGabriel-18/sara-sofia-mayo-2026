@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sara Sofía · Mayo 2026 🌿</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor">🌿</div>
+
+<!-- MANCHAS DE FONDO -->
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+<div class="blob blob-4"></div>
+
+<!-- DECORACIONES SVG ESQUINAS -->
+<svg class="deco-svg" style="top:0;left:0;width:280px;height:280px" viewBox="0 0 280 280" fill="none">
+  <ellipse cx="40" cy="40" rx="38" ry="18" fill="#4caf7d" opacity="0.15" transform="rotate(-30 40 40)"/>
+  <ellipse cx="100" cy="20" rx="28" ry="12" fill="#8dd5a3" opacity="0.12" transform="rotate(20 100 20)"/>
+  <ellipse cx="20" cy="100" rx="24" ry="10" fill="#4caf7d" opacity="0.1" transform="rotate(-50 20 100)"/>
+  <circle cx="70" cy="70" r="8" fill="#f9c74f" opacity="0.15"/>
+  <circle cx="140" cy="30" r="5" fill="#4caf7d" opacity="0.1"/>
+  <ellipse cx="160" cy="60" rx="20" ry="9" fill="#8dd5a3" opacity="0.1" transform="rotate(40 160 60)"/>
+  <circle cx="30" cy="160" r="6" fill="#f9c74f" opacity="0.12"/>
+  <ellipse cx="200" cy="20" rx="16" ry="7" fill="#4caf7d" opacity="0.08" transform="rotate(-20 200 20)"/>
+</svg>
+
+<svg class="deco-svg" style="bottom:0;right:0;width:280px;height:280px" viewBox="0 0 280 280" fill="none">
+  <ellipse cx="240" cy="240" rx="38" ry="18" fill="#4caf7d" opacity="0.15" transform="rotate(150 240 240)"/>
+  <ellipse cx="180" cy="260" rx="28" ry="12" fill="#8dd5a3" opacity="0.12" transform="rotate(-20 180 260)"/>
+  <ellipse cx="260" cy="180" rx="24" ry="10" fill="#4caf7d" opacity="0.1" transform="rotate(50 260 180)"/>
+  <circle cx="210" cy="210" r="8" fill="#f9c74f" opacity="0.15"/>
+  <circle cx="140" cy="250" r="5" fill="#4caf7d" opacity="0.1"/>
+  <ellipse cx="120" cy="220" rx="20" ry="9" fill="#8dd5a3" opacity="0.1" transform="rotate(-40 120 220)"/>
+  <circle cx="250" cy="120" r="6" fill="#f4845f" opacity="0.1"/>
+</svg>
+
+<!-- EASTER EGG -->
+<div id="easter-egg" onclick="mostrarEasterEgg()">🐛</div>
+<div id="easter-toast"></div>
+
+<!-- IMÁGENES Y VIDEOS PRECARGADOS — igual que LiveDog -->
+<!-- Están ocultos desde el inicio, se muestran al hacer clic en el día -->
+<div id="media-precargado" style="display:none">
+  <img id="img-1"  src="assets/1.jpeg"  alt="Día 1">
+  <video id="vid-2"  src="assets/2.mp4"  preload="metadata"></video>
+  <video id="vid-4"  src="assets/4.mp4"  preload="metadata"></video>
+  <video id="vid-5"  src="assets/5.mp4"  preload="metadata"></video>
+  <video id="vid-7"  src="assets/7.mp4"  preload="metadata"></video>
+  <img id="img-8"  src="assets/8.jpg"  alt="Día 8">
+  <img id="img-10" src="assets/10.jpg" alt="Día 10">
+  <img id="img-11" src="assets/11.jpg" alt="Día 11">
+  <video id="vid-12" src="assets/12.mp4" preload="metadata"></video>
+  <img id="img-13" src="assets/13.jpg" alt="Día 13">
+  <img id="img-19" src="assets/19.jpg" alt="Día 19">
+  <img id="img-20" src="assets/20.jpg" alt="Día 20">
+  <img id="img-22" src="assets/22.jpg" alt="Día 22">
+  <video id="vid-23" src="assets/23.mp4" preload="metadata"></video>
+  <img id="img-24" src="assets/24.jpg" alt="Día 24">
+  <img id="img-25" src="assets/25.jpg" alt="Día 25">
+  <img id="img-27" src="assets/27.jpg" alt="Día 27">
+  <video id="vid-29" src="assets/29.mp4" preload="metadata"></video>
+</div>
+
+<!-- ANIMALITOS DECORATIVOS FIJOS -->
+<!-- Mariposa fija derecha -->
+<svg style="position:fixed;right:15px;top:35%;width:55px;height:55px;pointer-events:none;z-index:0;opacity:0.25;animation:aletear 3s ease-in-out infinite" viewBox="0 0 55 55">
+  <ellipse cx="27" cy="22" rx="20" ry="11" fill="#f4845f" transform="rotate(-35 27 22)"/>
+  <ellipse cx="27" cy="22" rx="14" ry="8" fill="#f9c74f" opacity="0.8" transform="rotate(-35 27 22)"/>
+  <ellipse cx="27" cy="32" rx="16" ry="9" fill="#f4845f" transform="rotate(30 27 32)"/>
+  <ellipse cx="27" cy="32" rx="11" ry="6" fill="#f9c74f" opacity="0.8" transform="rotate(30 27 32)"/>
+  <line x1="27" y1="18" x2="27" y2="36" stroke="#8B6914" stroke-width="1.5" opacity="0.8"/>
+</svg>
+
+<!-- Hojita fija izquierda -->
+<svg style="position:fixed;left:10px;top:55%;width:40px;height:40px;pointer-events:none;z-index:0;opacity:0.2;animation:oscilar 4s ease-in-out infinite" viewBox="0 0 40 40">
+  <ellipse cx="20" cy="20" rx="18" ry="10" fill="#4caf7d" transform="rotate(-40 20 20)"/>
+  <line x1="8" y1="28" x2="32" y2="12" stroke="#2d7a54" stroke-width="1.5" opacity="0.6"/>
+</svg>
+
+<!-- Abejita fija -->
+<svg style="position:fixed;right:25px;bottom:35%;width:45px;height:45px;pointer-events:none;z-index:0;opacity:0.22;animation:aletear 2s ease-in-out infinite" viewBox="0 0 45 45">
+  <ellipse cx="22" cy="26" rx="12" ry="9" fill="#f9c74f"/>
+  <line x1="14" y1="22" x2="32" y2="22" stroke="#2c5f3f" stroke-width="2" opacity="0.7"/>
+  <line x1="16" y1="27" x2="30" y2="27" stroke="#2c5f3f" stroke-width="2" opacity="0.7"/>
+  <circle cx="22" cy="17" r="7" fill="#f9c74f"/>
+  <circle cx="20" cy="15" r="1.5" fill="#2c5f3f"/>
+  <circle cx="24" cy="15" r="1.5" fill="#2c5f3f"/>
+  <ellipse cx="14" cy="20" rx="10" ry="5" fill="white" opacity="0.6" transform="rotate(-30 14 20)"/>
+  <ellipse cx="30" cy="20" rx="10" ry="5" fill="white" opacity="0.6" transform="rotate(30 30 20)"/>
+</svg>
+
+<style>
+@keyframes aletear { 0%,100%{transform:scaleX(1)} 50%{transform:scaleX(0.7)} }
+@keyframes oscilar { 0%,100%{transform:rotate(-10deg)} 50%{transform:rotate(10deg)} }
+</style>
+
+<div class="wrap">
+
+  <!-- CABECERA -->
+  <header>
+    <div class="header-deco-tl">🌿</div>
+    <div class="header-deco-tr">🍃</div>
+    <div class="chip-mes">🌿 Calendario del Medio Ambiente · 2026 🌿</div>
+    <div class="titulo-principal">30 días por el planeta</div>
+    <div class="nombre-grande">Sara <em>Sofía</em></div>
+    <p class="frase-header">"Pequeñas acciones generan grandes cambios para nuestro planeta" 🌍</p>
+
+    <!-- ILUSTRACIÓN PRINCIPAL: árbol grande con animalitos -->
+    <svg style="width:100%;max-width:500px;margin:24px auto 0;display:block;" viewBox="0 0 500 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- PASTO / SUELO -->
+      <ellipse cx="250" cy="245" rx="220" ry="22" fill="#a8d8b0" opacity="0.5"/>
+      <ellipse cx="250" cy="248" rx="200" ry="16" fill="#7ec899" opacity="0.4"/>
+
+      <!-- FLORES EN EL SUELO -->
+      <circle cx="60" cy="238" r="5" fill="#f9c74f" opacity="0.9"/>
+      <circle cx="60" cy="238" r="2" fill="#f4845f"/>
+      <ellipse cx="55" cy="236" rx="4" ry="2" fill="#f9c74f" opacity="0.7" transform="rotate(-30 55 236)"/>
+      <ellipse cx="65" cy="236" rx="4" ry="2" fill="#f9c74f" opacity="0.7" transform="rotate(30 65 236)"/>
+      <ellipse cx="60" cy="232" rx="4" ry="2" fill="#f9c74f" opacity="0.7"/>
+
+      <circle cx="420" cy="238" r="5" fill="#f4845f" opacity="0.9"/>
+      <circle cx="420" cy="238" r="2" fill="#f9c74f"/>
+      <ellipse cx="415" cy="236" rx="4" ry="2" fill="#f4845f" opacity="0.7" transform="rotate(-30 415 236)"/>
+      <ellipse cx="425" cy="236" rx="4" ry="2" fill="#f4845f" opacity="0.7" transform="rotate(30 425 236)"/>
+      <ellipse cx="420" cy="232" rx="4" ry="2" fill="#f4845f" opacity="0.7"/>
+
+      <circle cx="160" cy="242" r="4" fill="#74b3ce" opacity="0.8"/>
+      <circle cx="340" cy="242" r="4" fill="#f9c74f" opacity="0.8"/>
+      <circle cx="100" cy="241" r="3" fill="#f4845f" opacity="0.7"/>
+      <circle cx="390" cy="241" r="3" fill="#74b3ce" opacity="0.7"/>
+
+      <!-- ÁRBOL PRINCIPAL - TRONCO -->
+      <rect x="232" y="140" width="36" height="110" rx="8" fill="#8B6914" opacity="0.85"/>
+      <rect x="240" y="150" width="8" height="90" rx="4" fill="#a07820" opacity="0.4"/>
+      <!-- ramas -->
+      <path d="M250 180 Q200 160 175 140" stroke="#8B6914" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+      <path d="M250 200 Q310 185 335 165" stroke="#8B6914" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+      <path d="M250 165 Q235 140 220 120" stroke="#8B6914" stroke-width="7" stroke-linecap="round" opacity="0.6"/>
+
+      <!-- COPA DEL ÁRBOL - múltiples círculos estilo acuarela -->
+      <circle cx="250" cy="95" r="88" fill="#52b788" opacity="0.25"/>
+      <circle cx="250" cy="90" r="80" fill="#4caf7d" opacity="0.3"/>
+      <circle cx="220" cy="100" r="65" fill="#3d9e6e" opacity="0.35"/>
+      <circle cx="278" cy="98" r="68" fill="#52b788" opacity="0.3"/>
+      <circle cx="250" cy="75" r="60" fill="#40916c" opacity="0.4"/>
+      <circle cx="230" cy="85" r="55" fill="#52b788" opacity="0.35"/>
+      <circle cx="268" cy="82" r="58" fill="#4caf7d" opacity="0.3"/>
+      <circle cx="250" cy="68" r="52" fill="#40916c" opacity="0.45"/>
+      <circle cx="215" cy="78" r="48" fill="#52b788" opacity="0.4"/>
+      <circle cx="282" cy="75" r="50" fill="#3d9e6e" opacity="0.38"/>
+      <circle cx="250" cy="58" r="44" fill="#2d7a54" opacity="0.4"/>
+      <!-- destellos de luz en la copa -->
+      <circle cx="225" cy="65" r="12" fill="#95d5b2" opacity="0.3"/>
+      <circle cx="270" cy="55" r="9" fill="#b7e4c7" opacity="0.25"/>
+      <circle cx="240" cy="45" r="7" fill="#d8f3dc" opacity="0.3"/>
+
+      <!-- ÁRBOL PEQUEÑO IZQUIERDO -->
+      <rect x="88" y="200" width="16" height="48" rx="5" fill="#8B6914" opacity="0.75"/>
+      <circle cx="96" cy="190" r="32" fill="#52b788" opacity="0.25"/>
+      <circle cx="96" cy="186" r="27" fill="#4caf7d" opacity="0.35"/>
+      <circle cx="88" cy="192" r="24" fill="#40916c" opacity="0.4"/>
+      <circle cx="104" cy="188" r="26" fill="#52b788" opacity="0.3"/>
+      <circle cx="96" cy="178" r="22" fill="#2d7a54" opacity="0.42"/>
+
+      <!-- ÁRBOL PEQUEÑO DERECHO -->
+      <rect x="396" y="205" width="14" height="43" rx="5" fill="#8B6914" opacity="0.75"/>
+      <circle cx="403" cy="194" r="29" fill="#52b788" opacity="0.25"/>
+      <circle cx="403" cy="190" r="24" fill="#4caf7d" opacity="0.35"/>
+      <circle cx="396" cy="196" r="22" fill="#40916c" opacity="0.38"/>
+      <circle cx="410" cy="192" r="23" fill="#3d9e6e" opacity="0.32"/>
+      <circle cx="403" cy="183" r="20" fill="#2d7a54" opacity="0.4"/>
+
+      <!-- MATORRALES -->
+      <ellipse cx="140" cy="240" rx="42" ry="18" fill="#52b788" opacity="0.4"/>
+      <ellipse cx="130" cy="238" rx="30" ry="14" fill="#40916c" opacity="0.4"/>
+      <ellipse cx="152" cy="237" rx="28" ry="13" fill="#3d9e6e" opacity="0.35"/>
+
+      <ellipse cx="360" cy="240" rx="42" ry="18" fill="#52b788" opacity="0.4"/>
+      <ellipse cx="370" cy="238" rx="30" ry="14" fill="#40916c" opacity="0.4"/>
+      <ellipse cx="348" cy="237" rx="28" ry="13" fill="#3d9e6e" opacity="0.35"/>
+
+      <!-- MARIPOSA (arriba derecha del árbol) -->
+      <g transform="translate(330,55) rotate(15)">
+        <ellipse cx="0" cy="0" rx="18" ry="10" fill="#f4845f" opacity="0.85" transform="rotate(-30)"/>
+        <ellipse cx="0" cy="0" rx="14" ry="8" fill="#f9c74f" opacity="0.7" transform="rotate(-30)"/>
+        <ellipse cx="0" cy="4" rx="13" ry="7" fill="#f4845f" opacity="0.8" transform="rotate(30)"/>
+        <ellipse cx="0" cy="4" rx="10" ry="5" fill="#f9c74f" opacity="0.6" transform="rotate(30)"/>
+        <line x1="0" y1="-2" x2="0" y2="8" stroke="#8B6914" stroke-width="1.5" opacity="0.7"/>
+        <path d="M0,-2 Q-4,-8 -3,-12" stroke="#8B6914" stroke-width="1" opacity="0.6" fill="none"/>
+        <path d="M0,-2 Q4,-8 3,-12" stroke="#8B6914" stroke-width="1" opacity="0.6" fill="none"/>
+      </g>
+
+      <!-- SEGUNDA MARIPOSA (izquierda) -->
+      <g transform="translate(155,50) rotate(-10)">
+        <ellipse cx="0" cy="0" rx="14" ry="8" fill="#74b3ce" opacity="0.85" transform="rotate(-30)"/>
+        <ellipse cx="0" cy="0" rx="10" ry="6" fill="#aed9e0" opacity="0.7" transform="rotate(-30)"/>
+        <ellipse cx="0" cy="3" rx="10" ry="6" fill="#74b3ce" opacity="0.8" transform="rotate(30)"/>
+        <ellipse cx="0" cy="3" rx="7" ry="4" fill="#aed9e0" opacity="0.6" transform="rotate(30)"/>
+        <line x1="0" y1="-1" x2="0" y2="6" stroke="#2c5f3f" stroke-width="1.2" opacity="0.6"/>
+        <path d="M0,-1 Q-3,-6 -2,-9" stroke="#2c5f3f" stroke-width="0.8" opacity="0.5" fill="none"/>
+        <path d="M0,-1 Q3,-6 2,-9" stroke="#2c5f3f" stroke-width="0.8" opacity="0.5" fill="none"/>
+      </g>
+
+      <!-- PAJARITO en rama izquierda -->
+      <g transform="translate(178,137)">
+        <ellipse cx="0" cy="0" rx="10" ry="7" fill="#f9c74f" opacity="0.95"/>
+        <circle cx="7" cy="-3" r="6" fill="#f9c74f" opacity="0.95"/>
+        <circle cx="10" cy="-4" r="2" fill="#2c5f3f"/>
+        <circle cx="10.5" cy="-4.5" r="0.8" fill="white"/>
+        <path d="M12,-3 L16,-2 L12,-1" fill="#f4845f" opacity="0.9"/>
+        <path d="M-8,4 Q-14,8 -10,12" stroke="#f4845f" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+        <ellipse cx="3" cy="4" rx="4" ry="2" fill="#e8a020" opacity="0.5"/>
+        <!-- patitas -->
+        <line x1="-3" y1="6" x2="-3" y2="11" stroke="#8B6914" stroke-width="1.2"/>
+        <line x1="2" y1="6" x2="2" y2="11" stroke="#8B6914" stroke-width="1.2"/>
+      </g>
+
+      <!-- RANITA en base del tronco -->
+      <g transform="translate(290,237)">
+        <ellipse cx="0" cy="0" rx="15" ry="10" fill="#52b788" opacity="0.95"/>
+        <circle cx="-8" cy="-4" r="6" fill="#52b788" opacity="0.95"/>
+        <circle cx="8" cy="-4" r="6" fill="#52b788" opacity="0.95"/>
+        <circle cx="-8" cy="-5" r="3" fill="#95d5b2"/>
+        <circle cx="8" cy="-5" r="3" fill="#95d5b2"/>
+        <circle cx="-8" cy="-5" r="1.5" fill="#2c5f3f"/>
+        <circle cx="8" cy="-5" r="1.5" fill="#2c5f3f"/>
+        <!-- boca -->
+        <path d="M-4,2 Q0,5 4,2" stroke="#2c5f3f" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- patitas -->
+        <path d="M-14,4 Q-20,8 -16,12" stroke="#40916c" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M14,4 Q20,8 16,12" stroke="#40916c" stroke-width="3" stroke-linecap="round" fill="none"/>
+      </g>
+
+      <!-- GUSANITO Wiggles en el suelo izquierda -->
+      <g transform="translate(58,242)">
+        <circle cx="0" cy="0" r="7" fill="#f4845f" opacity="0.95"/>
+        <circle cx="10" cy="2" r="6" fill="#f4845f" opacity="0.9"/>
+        <circle cx="19" cy="1" r="5.5" fill="#f4845f" opacity="0.85"/>
+        <!-- cabeza -->
+        <circle cx="-8" cy="-2" r="8" fill="#f9c74f" opacity="0.95"/>
+        <circle cx="-11" cy="-5" r="1.8" fill="#2c5f3f"/>
+        <circle cx="-5" cy="-5" r="1.8" fill="#2c5f3f"/>
+        <circle cx="-10.5" cy="-5.5" r="0.7" fill="white"/>
+        <circle cx="-4.5" cy="-5.5" r="0.7" fill="white"/>
+        <path d="M-11,-9 Q-10,-13 -9,-9" stroke="#f4845f" stroke-width="1.2" fill="none"/>
+        <path d="M-7,-9 Q-6,-13 -5,-9" stroke="#f4845f" stroke-width="1.2" fill="none"/>
+        <path d="M-10,-1 Q-8,2 -6,-1" stroke="#e07020" stroke-width="1" fill="none" stroke-linecap="round"/>
+      </g>
+
+      <!-- MARIQUITA en hoja del árbol -->
+      <g transform="translate(295,105)">
+        <ellipse cx="0" cy="0" rx="7" ry="5" fill="#e53935" opacity="0.9"/>
+        <ellipse cx="0" cy="-1" rx="6" ry="4" fill="#c62828" opacity="0.5"/>
+        <circle cx="-2" cy="1" r="1.5" fill="#1a1a1a" opacity="0.8"/>
+        <circle cx="2" cy="-1" r="1.2" fill="#1a1a1a" opacity="0.8"/>
+        <circle cx="3" cy="2" r="1" fill="#1a1a1a" opacity="0.8"/>
+        <line x1="-7" y1="0" x2="7" y2="0" stroke="#1a1a1a" stroke-width="1" opacity="0.6"/>
+        <!-- cabeza -->
+        <circle cx="-6" cy="0" r="3.5" fill="#1a1a1a" opacity="0.85"/>
+        <circle cx="-7" cy="-1" r="0.8" fill="white" opacity="0.7"/>
+      </g>
+
+      <!-- NUBE DECORATIVA -->
+      <g transform="translate(30,30)" opacity="0.35">
+        <circle cx="20" cy="20" r="15" fill="white"/>
+        <circle cx="35" cy="15" r="18" fill="white"/>
+        <circle cx="50" cy="20" r="14" fill="white"/>
+        <circle cx="62" cy="22" r="12" fill="white"/>
+        <rect x="5" y="20" width="70" height="18" rx="5" fill="white"/>
+      </g>
+
+      <!-- SOL decorativo -->
+      <g transform="translate(440,20)" opacity="0.5">
+        <circle cx="0" cy="0" r="18" fill="#f9c74f"/>
+        <circle cx="0" cy="0" r="13" fill="#fdd835"/>
+        <line x1="0" y1="-24" x2="0" y2="-28" stroke="#f9c74f" stroke-width="3" stroke-linecap="round"/>
+        <line x1="17" y1="-17" x2="20" y2="-20" stroke="#f9c74f" stroke-width="3" stroke-linecap="round"/>
+        <line x1="24" y1="0" x2="28" y2="0" stroke="#f9c74f" stroke-width="3" stroke-linecap="round"/>
+        <line x1="17" y1="17" x2="20" y2="20" stroke="#f9c74f" stroke-width="3" stroke-linecap="round"/>
+        <line x1="0" y1="24" x2="0" y2="28" stroke="#f9c74f" stroke-width="3" stroke-linecap="round"/>
+        <line x1="-17" y1="17" x2="-20" y2="20" stroke="#f9c74f" stroke-width="3" stroke-linecap="round"/>
+        <line x1="-24" y1="0" x2="-28" y2="0" stroke="#f9c74f" stroke-width="3" stroke-linecap="round"/>
+        <line x1="-17" y1="-17" x2="-20" y2="-20" stroke="#f9c74f" stroke-width="3" stroke-linecap="round"/>
+      </g>
+
+      <!-- HOJITAS FLOTANTES -->
+      <ellipse cx="380" cy="120" rx="8" ry="4" fill="#52b788" opacity="0.5" transform="rotate(-40 380 120)"/>
+      <ellipse cx="120" cy="140" rx="6" ry="3" fill="#40916c" opacity="0.4" transform="rotate(30 120 140)"/>
+      <ellipse cx="450" cy="160" rx="7" ry="3.5" fill="#52b788" opacity="0.4" transform="rotate(-20 450 160)"/>
+      <ellipse cx="40" cy="180" rx="5" ry="2.5" fill="#4caf7d" opacity="0.4" transform="rotate(50 40 180)"/>
+
+    </svg>
+  </header>
+
+  <!-- BANNER 30/30 -->
+  <div class="banner-completado">
+    <div class="banner-ico">🏆</div>
+    <div>
+      <div class="banner-titulo">¡30 de 30 días completados! · Mayo 2026</div>
+      <div class="banner-sub">Sara Sofía cumplió cada compromiso verde del mes 🌿 ¡Un logro increíble!</div>
+    </div>
+    <div class="banner-ico">🌍</div>
+  </div>
+
+  <!-- PROGRESO -->
+  <div class="progreso-zona">
+    <div class="progreso-label">🌱 Días completados del mes verde</div>
+    <div class="progreso-track">
+      <div class="progreso-fill" id="progresoFill" style="width:0%"></div>
+    </div>
+    <div class="progreso-num" id="progresoNum">0 / 30 días</div>
+  </div>
+
+  <!-- CABECERA DÍAS SEMANA -->
+  <div class="semana-grid" style="margin-bottom:8px">
+    <div class="d-sem">Dom</div><div class="d-sem">Lun</div>
+    <div class="d-sem">Mar</div><div class="d-sem">Mié</div>
+    <div class="d-sem">Jue</div><div class="d-sem">Vie</div>
+    <div class="d-sem">Sáb</div>
+  </div>
+
+  <!-- SEMANA 1 -->
+  <div class="semana-label">
+    <div class="semana-chip">💧 Semana 1 · Ahorro de Agua</div>
+    <div class="semana-linea"></div>
+  </div>
+  <div class="semana-grid" id="grid-s1"></div>
+
+  <!-- SEMANA 2 -->
+  <div class="semana-label">
+    <div class="semana-chip s2">♻️ Semana 2 · Reducción de Residuos</div>
+    <div class="semana-linea s2"></div>
+  </div>
+  <div class="semana-grid" id="grid-s2"></div>
+
+  <!-- SEMANA 3 -->
+  <div class="semana-label">
+    <div class="semana-chip s3">💡 Semana 3 · Ahorro Energético</div>
+    <div class="semana-linea s3"></div>
+  </div>
+  <div class="semana-grid" id="grid-s3"></div>
+
+  <!-- SEMANA 4 -->
+  <div class="semana-label">
+    <div class="semana-chip s4">🌱 Semana 4 · Conexión con la Naturaleza</div>
+    <div class="semana-linea s4"></div>
+  </div>
+  <div class="semana-grid" id="grid-s4"></div>
+
+  <!-- DIVISOR -->
+  <div class="divisor">
+    <div class="divisor-linea"></div>
+    <div class="divisor-centro">✍️</div>
+    <div class="divisor-linea"></div>
+  </div>
+
+  <!-- REFLEXIÓN -->
+  <section class="reflexion-seccion">
+    <div class="reflexion-header">
+      <div class="reflexion-chip">✍️ Reflexión Final · Mayo 2026</div>
+      <div class="reflexion-titulo">Mis palabras<br>para el <em>Planeta</em></div>
+      <p class="reflexion-sub">Un mes de compromisos verdes. Aquí están mis pensamientos sobre lo que viví, sentí y aprendí durante este camino.</p>
+    </div>
+
+    <div class="preguntas-grid" style="margin-top:25px">
+
+      <div class="pregunta-card">
+        <div class="pregunta-etiqueta">😊 Pregunta 1</div>
+        <span class="pregunta-icono">💧</span>
+        <div class="pregunta-texto">¿Cuál fue el compromiso más fácil de cumplir?</div>
+        <textarea class="respuesta-area" id="resp1">El compromiso más fácil fue apagar las luces al salir de cada cuarto. Ya lo hacía a veces, pero este mes me lo propuse en serio y se volvió un hábito natural. Cada vez que apagaba la luz sentía que hacía algo pequeño pero real por el planeta.</textarea>
+      </div>
+
+      <div class="pregunta-card">
+        <div class="pregunta-etiqueta">💪 Pregunta 2</div>
+        <span class="pregunta-icono">♻️</span>
+        <div class="pregunta-texto">¿Cuál fue el más difícil?</div>
+        <textarea class="respuesta-area" id="resp2">El más difícil fue decirle no al plástico de un solo uso. Hay bolsas y empaques plásticos en todas partes y a veces uno ni se da cuenta. Tuve que recordarme constantemente llevar mi bolsa de tela y fue difícil al principio, pero aprendí que se puede.</textarea>
+      </div>
+
+      <div class="pregunta-card">
+        <div class="pregunta-etiqueta">🏡 Pregunta 3</div>
+        <span class="pregunta-icono">🌱</span>
+        <div class="pregunta-texto">¿Qué cambios notaron en su hogar?</div>
+        <textarea class="respuesta-area" id="resp3">En casa empezamos a separar la basura en reciclable y no reciclable. Mi mamá también empezó a cerrar la llave del agua mientras lavaba los platos. Fue bonito ver que mis compromisos contagiaron a mi familia. El planeta nos une a todos.</textarea>
+      </div>
+
+    </div>
+
+    <div class="firma-final">
+      <div class="firma-nombre">Sara <em>Sofía</em></div>
+      <div class="firma-sub">· Guardiana Verde · Mayo 2026 ·</div>
+      <div class="firma-emojis">🌱 🌍 🌿 💚 🌸</div>
+    </div>
+  </section>
+</div>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay" onclick="cerrarSiOverlay(event)">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <button class="modal-close" onclick="cerrar()">✕</button>
+    <div class="modal-semana" id="mMeta"></div>
+    <div class="modal-h" id="mTitulo"></div>
+    <div id="mCuerpo"></div>
+    <p class="modal-desc" id="mDesc"></p>
+    <button class="modal-chk-btn" id="mChkBtn" onclick="toggleChkModal()">
+      <span id="mChkIco">○</span>
+      <span id="mChkTxt">Marcar como completado</span>
+    </button>
+  </div>
+</div>
+
+<script>
+/* ══ MEMORIA DE ARCHIVOS CARGADOS ══ */
+const mediaMemoria = {};
+
+function cargarArchivo(event, dia, tipo) {
+  const file = event.target.files[0];
+  if(!file) return;
+  const url = URL.createObjectURL(file);
+  mediaMemoria[dia] = url;
+  const cuerpo = document.getElementById('mCuerpo');
+  if(tipo === 'foto') {
+    cuerpo.innerHTML = `<img src="${url}" class="modal-img" alt="Día ${dia}">`;
+  } else {
+    cuerpo.innerHTML = `<video class="modal-img" controls style="max-height:380px;background:#000;">
+      <source src="${url}" type="video/mp4">
+    </video>`;
+  }
+}
+
+function mostrarSelectorVideoHTML(d) {
+  return `<div class="selector-media">
+    <div class="selector-ico">🎬</div>
+    <div class="selector-texto">Selecciona el video del día ${d}</div>
+    <label class="selector-btn">
+      🗂️ Buscar video
+      <input type="file" accept="video/*" style="display:none"
+        onchange="cargarArchivo(event, ${d}, 'video')">
+    </label>
+  </div>`;
+}
+
+/* ══ CURSOR ══ */
+const cursor = document.getElementById('cursor');
+const CE = ['🌿','🍃','🍀','🌱'];
+let cI = 0;
+document.addEventListener('mousemove', e => { cursor.style.left=e.clientX+'px'; cursor.style.top=e.clientY+'px'; });
+document.addEventListener('mousedown', () => { cursor.classList.add('click'); cI=(cI+1)%CE.length; cursor.textContent=CE[cI]; });
+document.addEventListener('mouseup', () => cursor.classList.remove('click'));
+
+/* ══ CONFETI ══ */
+function lanzarConfeti(x,y) {
+  const items=['🌿','🍀','🌱','✨','💚','🌸','⭐','🎉'];
+  for(let i=0;i<14;i++){
+    const el=document.createElement('div');
+    el.className='confeti-pieza';
+    el.textContent=items[Math.floor(Math.random()*items.length)];
+    el.style.left=(x-30+Math.random()*60)+'px';
+    el.style.top=(y-10)+'px';
+    el.style.fontSize=(0.8+Math.random()*1)+'rem';
+    el.style.animationDuration=(1.2+Math.random()*1)+'s';
+    el.style.animationDelay=(Math.random()*0.3)+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),2500);
+  }
+}
+
+/* ══ DATOS ══ */
+const DATOS = {
+  1:  { t:"Cerrar la llave",          corto:"Ahorra agua al cepillarte",        tipo:"foto",  s:"s1", h:"500px", w:"100%", d:"Semana 1 · Ahorro de Agua" },
+  2:  { t:"Agua Lluvia",              corto:"Recolecta agua lluvia",             tipo:"video", s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua — Recolectar agua lluvia para regar las plantas." },
+  3:  { t:"Ducha de 5 Minutos",       corto:"Reduce tu ducha a 5 min",          tipo:"texto", s:"s1", c:"🚿 Reducir el tiempo de la ducha a 5 minutos. Cada minuto de ducha gasta hasta 10 litros de agua. ¡Con este compromiso puedes ahorrar decenas de litros cada día, Sara Sofía!", d:"Semana 1 · Ahorro de Agua" },
+  4:  { t:"Lavar sin Grifo",          corto:"Lava frutas en un recipiente",     tipo:"video", s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua — Lavar frutas y verduras en un recipiente en lugar de hacerlo con el grifo abierto." },
+  5:  { t:"Agua Reutilizada",         corto:"Reutiliza el agua del lavado",     tipo:"video", s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua — Reutilizar el agua del lavado de ropa para trapear o regar plantas." },
+  6:  { t:"Caza Fugas",               corto:"Revisa fugas de agua en casa",     tipo:"texto", s:"s1", c:"🔧 Revisar si hay fugas de agua en casa e intentar repararlas. Una llave que gotea puede desperdiciar hasta 30 litros de agua al día. ¡Detectar y reparar fugas es una de las acciones más poderosas que puedes hacer, Sara Sofía!", d:"Semana 1 · Ahorro de Agua" },
+  7:  { t:"Riego Inteligente",        corto:"Riega en la mañana o noche",       tipo:"video", s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua — Regar las plantas en la mañana o en la noche para evitar evaporación excesiva." },
+  8:  { t:"Separa Residuos",          corto:"Clasifica la basura en casa",      tipo:"foto",  s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Separar correctamente los residuos en casa." },
+  9:  { t:"No al Plástico",           corto:"Evita empaques innecesarios",      tipo:"texto", s:"s2", c:"🚫🛍️ Evitar productos con empaques plásticos innecesarios. El plástico tarda hasta 500 años en descomponerse. Cada vez que eliges un producto sin plástico, Sara Sofía, estás protegiendo los océanos y la vida marina.", d:"Semana 2 · Reducción de Residuos" },
+  10: { t:"Reutiliza Frascos",        corto:"Segunda vida a los frascos",       tipo:"foto",  s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Reutilizar frascos y envases en lugar de desecharlos." },
+  11: { t:"Manualidad Reciclada",     corto:"Crea con materiales viejos",       tipo:"foto",  s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Hacer una manualidad con materiales reciclados." },
+  12: { t:"Bolsa Reutilizable",       corto:"Lleva tu bolsa al mercado",        tipo:"video", s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Evitar el uso de bolsas plásticas y llevar una bolsa reutilizable al mercado." },
+  13: { t:"Tapitas por el Planeta",   corto:"Recoge tapitas para donar",        tipo:"foto",  s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Recolectar tapitas plásticas para donarlas a una causa ambiental." },
+  14: { t:"Comida sin Residuos",      corto:"Prepara comida sin plástico",      tipo:"texto", s:"s2", c:"🍽️ Preparar una comida sin generar residuos plásticos (sin empaques desechables). Cocinar en casa con ingredientes frescos es una forma deliciosa de cuidar el planeta. ¡Qué rico y qué verde, Sara Sofía!", d:"Semana 2 · Reducción de Residuos" },
+  15: { t:"Apaga las Luces",          corto:"Apaga luces cuando no se usen",    tipo:"texto", s:"s3", c:"💡 Apagar las luces cuando no se usen. ¡Sara Sofía, llevas 15 días de compromisos verdes! Este hábito puede ahorrar hasta un 10% de energía en el hogar. Cada cuarto que dejas a oscuras es una victoria por el planeta.", d:"Semana 3 · Ahorro Energético" },
+  16: { t:"Desconecta Cargadores",    corto:"Desconecta lo que no usas",        tipo:"video", s:"s3", h:"380px", w:"100%", d:"Semana 3 · Ahorro Energético — Desconectar cargadores y electrodomésticos en desuso." },
+  17: { t:"Luz Natural",              corto:"Usa la luz del sol al máximo",     tipo:"texto", s:"s3", c:"☀️ Usar la luz natural el mayor tiempo posible. Abre las cortinas, aprovecha el sol y apaga las luces del día. La luz solar es gratis, limpia e infinita. ¡Deja que el sol ilumine tu hogar y tu vida, Sara Sofía!", d:"Semana 3 · Ahorro Energético" },
+  18: { t:"Nevera Inteligente",       corto:"No abras la nevera sin necesidad", tipo:"texto", s:"s3", c:"🧊 Evitar abrir la nevera innecesariamente. Cada vez que abres la nevera sin necesidad, escapa el frío y el motor trabaja más gastando energía. ¡Piensa antes de abrir, Sara Sofía!", d:"Semana 3 · Ahorro Energético" },
+  19: { t:"Juegos en Familia",        corto:"Menos TV, más juegos juntos",      tipo:"foto",  s:"s3", h:"380px", w:"100%", d:"Semana 3 · Ahorro Energético — Reducir el uso del televisor y optar por juegos en familia." },
+  20: { t:"Cocina con Tapa",          corto:"Tapa las ollas para ahorrar gas",  tipo:"foto",  s:"s3", h:"380px", w:"100%", d:"Semana 3 · Ahorro Energético — Cocinar con tapa para ahorrar gas y energía." },
+  21: { t:"Plancha Inteligente",      corto:"Plancha varias prendas de una",    tipo:"texto", s:"s3", c:"👕 Planchar varias prendas a la vez para evitar gastar energía en encender la plancha muchas veces. ¡Organiza tu ropa y plancha todo de una sola vez, Sara Sofía!", d:"Semana 3 · Ahorro Energético" },
+  22: { t:"Planta un Árbol",          corto:"Siembra vida en tu comunidad",     tipo:"foto",  s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Plantar un árbol o una planta en casa o en la comunidad." },
+  23: { t:"Caminata Ecológica",       corto:"Camina y recoge basura",           tipo:"video", s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Hacer una caminata ecológica y recoger basura en el camino." },
+  24: { t:"Observa las Aves",         corto:"Aprende sobre las aves locales",   tipo:"foto",  s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Observar aves en el entorno y aprender sobre su importancia." },
+  25: { t:"Espacio Verde",            corto:"Crea un rincón verde en casa",     tipo:"foto",  s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Crear un espacio verde en casa con plantas nativas." },
+  26: { t:"Menos Papel",              corto:"Escribe por ambos lados",          tipo:"texto", s:"s4", c:"📄 Usar menos papel: escribir por ambos lados o reutilizar hojas. Un árbol produce solo unos 8.000 folios. ¡Cada hoja que ahorras es un pedacito de árbol que salvas, Sara Sofía!", d:"Semana 4 · Conexión con la Naturaleza" },
+  27: { t:"Movilidad Verde",          corto:"Camina o usa bicicleta hoy",       tipo:"foto",  s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Reducir el uso del carro o moto y optar por caminar o usar bicicleta." },
+  28: { t:"Desconexión Digital",      corto:"Menos pantallas, más energía",     tipo:"texto", s:"s4", c:"📵 Intentar disminuir el uso de dispositivos electrónicos para ahorrar energía. Los centros de datos consumen más electricidad que algunos países. ¡Cada hora sin pantalla cuenta, Sara Sofía!", d:"Semana 4 · Conexión con la Naturaleza" },
+  29: { t:"Charla Familiar",          corto:"Comparte lo aprendido en familia", tipo:"video", s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Compartir en familia una charla sobre lo aprendido en estos 30 días." },
+  30: { t:"Reflexión Final 🏆",       corto:"¡30 días de planeta cumplidos!",   tipo:"texto", s:"s4", c:"🎉🌿 ¡FELICITACIONES, Sara Sofía! Hoy haces una reflexión escrita sobre la experiencia y te comprometes con un hábito sostenible a largo plazo. Completaste los 30 días por el planeta. ¡El mundo es mejor contigo en él! 🌍💚", d:"Semana 4 · Conexión con la Naturaleza · ¡Día final!" }
+};
+
+const TIPO_ICO = { foto:'📷', video:'🎬', texto:'✍️' };
+const DIAS_ES = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+
+// Mayo 2026 arranca el viernes (día 5)
+// S1: días 1-7, S2: 8-14, S3: 15-21, S4: 22-30
+const SEMANAS = { s1:[1,7], s2:[8,14], s3:[15,21], s4:[22,30] };
+const primerDia = 5; // viernes
+
+let completados = {};
+for(let i=1;i<=30;i++) completados[i]=true;
+try { const g=localStorage.getItem('ss-ilus'); if(g!==null) completados=JSON.parse(g); } catch(e){}
+
+let selDia = null;
+
+function crearTarjeta(d, desfase) {
+  const dato = DATOS[d];
+  const ok = !!completados[d];
+  const el = document.createElement('div');
+  el.className = `dia ${dato.s}${ok?' completado':''}`;
+  el.style.animationDelay = (desfase * 0.04) + 's';
+  el.innerHTML = `
+    <span class="tipo-badge">${TIPO_ICO[dato.tipo]}</span>
+    <div class="num">${d}</div>
+    <div class="txt-corto">${dato.corto}</div>
+    <div class="check-row">
+      <div class="chk${ok?' on':''}" data-d="${d}"></div>
+      <span class="chk-lbl">${ok?'Hecho ✓':'Pendiente'}</span>
+    </div>
+  `;
+  el.querySelector('.chk').addEventListener('click', e => { e.stopPropagation(); toggleDia(d,e); });
+  el.addEventListener('click', () => abrirModal(d));
+  return el;
+}
+
+function build() {
+  ['s1','s2','s3','s4'].forEach(s => { document.getElementById('grid-'+s).innerHTML=''; });
+
+  // Mayo 2026: día 1 = Viernes (índice 5)
+  // Calculamos el día de semana real de cada día del mes
+  // y lo colocamos en el grid de su semana con celdas vacías al inicio
+
+  // Para cada semana calculamos cuántas celdas vacías van al inicio
+  // basándonos en el día de la semana real del primer día de esa semana de actividades
+
+  const semanas = [
+    { id: 's1', inicio: 1,  fin: 7  },
+    { id: 's2', inicio: 8,  fin: 14 },
+    { id: 's3', inicio: 15, fin: 21 },
+    { id: 's4', inicio: 22, fin: 30 }
+  ];
+
+  semanas.forEach(sem => {
+    const grid = document.getElementById('grid-' + sem.id);
+    const fechaInicio = new Date(2026, 4, sem.inicio); // mes 4 = mayo
+    const diaSemanaInicio = fechaInicio.getDay(); // 0=Dom, 1=Lun... 6=Sáb
+
+    // Celdas vacías antes del primer día
+    for(let i = 0; i < diaSemanaInicio; i++) {
+      grid.appendChild(document.createElement('div'));
+    }
+
+    // Días de la semana
+    for(let d = sem.inicio; d <= sem.fin; d++) {
+      grid.appendChild(crearTarjeta(d, d));
+    }
+
+    // Celdas vacías al final para completar la fila
+    const totalCeldas = diaSemanaInicio + (sem.fin - sem.inicio + 1);
+    const resto = totalCeldas % 7 === 0 ? 0 : 7 - (totalCeldas % 7);
+    for(let i = 0; i < resto; i++) {
+      grid.appendChild(document.createElement('div'));
+    }
+  });
+
+  actualizarProgreso();
+}
+
+function toggleDia(d,e) {
+  const antes=!!completados[d];
+  completados[d]=!antes;
+  if(!completados[d]) delete completados[d];
+  guardar(); build();
+  if(!antes&&e){ const r=e.target.getBoundingClientRect(); lanzarConfeti(r.left+r.width/2,r.top); }
+}
+
+function guardar() { try{ localStorage.setItem('ss-ilus',JSON.stringify(completados)); }catch(e){} }
+
+function actualizarProgreso() {
+  const total=Object.values(completados).filter(Boolean).length;
+  document.getElementById('progresoFill').style.width=(total/30*100)+'%';
+  document.getElementById('progresoNum').textContent=`${total} / 30 días`;
+  if(total>=15) document.getElementById('easter-egg').classList.add('visible');
+}
+
+function abrirModal(d) {
+  selDia=d;
+  const dato=DATOS[d];
+  const fecha=new Date(2026,4,d);
+  document.getElementById('mMeta').textContent=`🌿 ${DIAS_ES[fecha.getDay()]} ${d} de Mayo, 2026`;
+  document.getElementById('mTitulo').textContent=dato.t;
+  document.getElementById('mDesc').textContent=dato.d;
+  const cuerpo=document.getElementById('mCuerpo');
+
+  if(dato.tipo==='foto'){
+    const original = document.getElementById('img-'+d);
+    const src = original ? original.src : '';
+    const h = dato.h || '380px';
+    const w = dato.w || '100%';
+    cuerpo.innerHTML = src
+      ? `<img src="${src}" class="modal-img" alt="Día ${d}" style="width:${w};max-height:${h};object-fit:cover;border-radius:16px;border:3px solid var(--verde-menta);">`
+      : `<div class="sin-internet"><div class="ico">📷</div><div>Agrega <strong>assets/${d}.jpg</strong> a la carpeta assets</div></div>`;
+
+  } else if(dato.tipo==='video'){
+    const original = document.getElementById('vid-'+d);
+    const src = original ? original.src : '';
+    const h = dato.h || '380px';
+    const w = dato.w || '100%';
+    cuerpo.innerHTML = src
+      ? `<video src="${src}" class="modal-img" controls style="width:${w};max-height:${h};background:#000;border-radius:16px;border:3px solid var(--verde-menta);"></video>`
+      : `<div class="sin-internet"><div class="ico">🎬</div><div>Agrega <strong>assets/${d}.mp4</strong> a la carpeta assets</div></div>`;
+
+  } else {
+    cuerpo.innerHTML = `<div class="modal-texto">${dato.c}</div>`;
+  }
+  actualizarModalChk();
+  document.getElementById('overlay').classList.add('on');
+  document.body.style.overflow='hidden';
+}
+
+function actualizarModalChk() {
+  const ok=!!completados[selDia];
+  document.getElementById('mChkBtn').className='modal-chk-btn'+(ok?' on':'');
+  document.getElementById('mChkIco').textContent=ok?'✓':'○';
+  document.getElementById('mChkTxt').textContent=ok?'¡Día completado! 🌿':'Marcar como completado';
+}
+
+function toggleChkModal() {
+  if(!selDia) return;
+  const antes=!!completados[selDia];
+  completados[selDia]=!antes;
+  if(!completados[selDia]) delete completados[selDia];
+  guardar(); build(); actualizarModalChk();
+  if(!antes) lanzarConfeti(window.innerWidth/2,window.innerHeight/2);
+}
+
+function cerrar() {
+  document.getElementById('overlay').classList.remove('on');
+  document.body.style.overflow='';
+  selDia=null;
+  setTimeout(()=>{ document.getElementById('mCuerpo').innerHTML=''; },350);
+}
+function cerrarSiOverlay(e) { if(e.target===document.getElementById('overlay')) cerrar(); }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') cerrar(); });
+
+/* REFLEXIONES */
+function autoCrecer(el){ el.style.height='auto'; el.style.height=el.scrollHeight+'px'; }
+['resp1','resp2','resp3'].forEach(id=>{
+  const el=document.getElementById(id);
+  try{ const s=localStorage.getItem('ss-ilus-'+id); if(s) el.value=s; }catch(e){}
+  autoCrecer(el);
+  el.addEventListener('input',()=>{ autoCrecer(el); try{ localStorage.setItem('ss-ilus-'+id,el.value); }catch(e){} });
+});
+
+/* EASTER EGG */
+const ME=["🐛 ¡Encontraste a Wiggles! Soy el gusano guardián del calendario. ¡Es nuestro secreto, Sara Sofía! 🌿","🦋 ¡Wiggles se transformó en mariposa! Así como tú transformaste tu mes en algo verde y bonito. 💚","🌱 Wiggles dice: ¡30 días completados! Eres una guardiana verde de verdad. ¡El planeta te lo agradece! 🌍"];
+let eI=0;
+function mostrarEasterEgg(){
+  const t=document.getElementById('easter-toast');
+  t.textContent=ME[eI++%ME.length];
+  t.classList.add('on');
+  clearTimeout(window.eT);
+  window.eT=setTimeout(()=>t.classList.remove('on'),5000);
+}
+
+build();
+</script>
+</body>
+</html>
