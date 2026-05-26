@@ -46,7 +46,7 @@
 <!-- IMÁGENES Y VIDEOS PRECARGADOS — igual que LiveDog -->
 <!-- Están ocultos desde el inicio, se muestran al hacer clic en el día -->
 <div id="media-precargado" style="display:none">
-  <img id="img-1"  src="assets/1.jpeg"  alt="Día 1">
+  <img id="img-1"  src="assets/1.jpg"  alt="Día 1">
   <video id="vid-2"  src="assets/2.mp4"  preload="metadata"></video>
   <video id="vid-4"  src="assets/4.mp4"  preload="metadata"></video>
   <video id="vid-5"  src="assets/5.mp4"  preload="metadata"></video>
@@ -475,33 +475,33 @@ function lanzarConfeti(x,y) {
 
 /* ══ DATOS ══ */
 const DATOS = {
-  1:  { t:"Cerrar la llave",          corto:"Ahorra agua al cepillarte",        tipo:"foto",  s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua" },
+  1:  { t:"Cerrar la llave",          corto:"Ahorra agua al cepillarte",        tipo:"foto",  s:"s1", h:"380px", w:"100%", fit:"cover", d:"Semana 1 · Ahorro de Agua" },
   2:  { t:"Agua Lluvia",              corto:"Recolecta agua lluvia",             tipo:"video", s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua — Recolectar agua lluvia para regar las plantas." },
   3:  { t:"Ducha de 5 Minutos",       corto:"Reduce tu ducha a 5 min",          tipo:"texto", s:"s1", c:"🚿 Reducir el tiempo de la ducha a 5 minutos. Cada minuto de ducha gasta hasta 10 litros de agua. ¡Con este compromiso puedes ahorrar decenas de litros cada día, Sara Sofía!", d:"Semana 1 · Ahorro de Agua" },
   4:  { t:"Lavar sin Grifo",          corto:"Lava frutas en un recipiente",     tipo:"video", s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua — Lavar frutas y verduras en un recipiente en lugar de hacerlo con el grifo abierto." },
   5:  { t:"Agua Reutilizada",         corto:"Reutiliza el agua del lavado",     tipo:"video", s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua — Reutilizar el agua del lavado de ropa para trapear o regar plantas." },
   6:  { t:"Caza Fugas",               corto:"Revisa fugas de agua en casa",     tipo:"texto", s:"s1", c:"🔧 Revisar si hay fugas de agua en casa e intentar repararlas. Una llave que gotea puede desperdiciar hasta 30 litros de agua al día. ¡Detectar y reparar fugas es una de las acciones más poderosas que puedes hacer, Sara Sofía!", d:"Semana 1 · Ahorro de Agua" },
   7:  { t:"Riego Inteligente",        corto:"Riega en la mañana o noche",       tipo:"video", s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua — Regar las plantas en la mañana o en la noche para evitar evaporación excesiva." },
-  8:  { t:"Separa Residuos",          corto:"Clasifica la basura en casa",      tipo:"foto",  s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Separar correctamente los residuos en casa." },
+  8:  { t:"Separa Residuos",          corto:"Clasifica la basura en casa",      tipo:"foto",  s:"s2", h:"380px", w:"100%", fit:"cover", d:"Semana 2 · Reducción de Residuos — Separar correctamente los residuos en casa." },
   9:  { t:"No al Plástico",           corto:"Evita empaques innecesarios",      tipo:"texto", s:"s2", c:"🚫🛍️ Evitar productos con empaques plásticos innecesarios. El plástico tarda hasta 500 años en descomponerse. Cada vez que eliges un producto sin plástico, Sara Sofía, estás protegiendo los océanos y la vida marina.", d:"Semana 2 · Reducción de Residuos" },
-  10: { t:"Reutiliza Frascos",        corto:"Segunda vida a los frascos",       tipo:"foto",  s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Reutilizar frascos y envases en lugar de desecharlos." },
-  11: { t:"Manualidad Reciclada",     corto:"Crea con materiales viejos",       tipo:"foto",  s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Hacer una manualidad con materiales reciclados." },
+  10: { t:"Reutiliza Frascos",        corto:"Segunda vida a los frascos",       tipo:"foto",  s:"s2", h:"380px", w:"100%", fit:"cover", d:"Semana 2 · Reducción de Residuos — Reutilizar frascos y envases en lugar de desecharlos." },
+  11: { t:"Manualidad Reciclada",     corto:"Crea con materiales viejos",       tipo:"foto",  s:"s2", h:"380px", w:"100%", fit:"cover", d:"Semana 2 · Reducción de Residuos — Hacer una manualidad con materiales reciclados." },
   12: { t:"Bolsa Reutilizable",       corto:"Lleva tu bolsa al mercado",        tipo:"video", s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Evitar el uso de bolsas plásticas y llevar una bolsa reutilizable al mercado." },
-  13: { t:"Tapitas por el Planeta",   corto:"Recoge tapitas para donar",        tipo:"foto",  s:"s2", h:"380px", w:"100%", d:"Semana 2 · Reducción de Residuos — Recolectar tapitas plásticas para donarlas a una causa ambiental." },
+  13: { t:"Tapitas por el Planeta",   corto:"Recoge tapitas para donar",        tipo:"foto",  s:"s2", h:"380px", w:"100%", fit:"cover", d:"Semana 2 · Reducción de Residuos — Recolectar tapitas plásticas para donarlas a una causa ambiental." },
   14: { t:"Comida sin Residuos",      corto:"Prepara comida sin plástico",      tipo:"texto", s:"s2", c:"🍽️ Preparar una comida sin generar residuos plásticos (sin empaques desechables). Cocinar en casa con ingredientes frescos es una forma deliciosa de cuidar el planeta. ¡Qué rico y qué verde, Sara Sofía!", d:"Semana 2 · Reducción de Residuos" },
   15: { t:"Apaga las Luces",          corto:"Apaga luces cuando no se usen",    tipo:"texto", s:"s3", c:"💡 Apagar las luces cuando no se usen. ¡Sara Sofía, llevas 15 días de compromisos verdes! Este hábito puede ahorrar hasta un 10% de energía en el hogar. Cada cuarto que dejas a oscuras es una victoria por el planeta.", d:"Semana 3 · Ahorro Energético" },
   16: { t:"Desconecta Cargadores",    corto:"Desconecta lo que no usas",        tipo:"video", s:"s3", h:"380px", w:"100%", d:"Semana 3 · Ahorro Energético — Desconectar cargadores y electrodomésticos en desuso." },
   17: { t:"Luz Natural",              corto:"Usa la luz del sol al máximo",     tipo:"texto", s:"s3", c:"☀️ Usar la luz natural el mayor tiempo posible. Abre las cortinas, aprovecha el sol y apaga las luces del día. La luz solar es gratis, limpia e infinita. ¡Deja que el sol ilumine tu hogar y tu vida, Sara Sofía!", d:"Semana 3 · Ahorro Energético" },
   18: { t:"Nevera Inteligente",       corto:"No abras la nevera sin necesidad", tipo:"texto", s:"s3", c:"🧊 Evitar abrir la nevera innecesariamente. Cada vez que abres la nevera sin necesidad, escapa el frío y el motor trabaja más gastando energía. ¡Piensa antes de abrir, Sara Sofía!", d:"Semana 3 · Ahorro Energético" },
-  19: { t:"Juegos en Familia",        corto:"Menos TV, más juegos juntos",      tipo:"foto",  s:"s3", h:"380px", w:"100%", d:"Semana 3 · Ahorro Energético — Reducir el uso del televisor y optar por juegos en familia." },
-  20: { t:"Cocina con Tapa",          corto:"Tapa las ollas para ahorrar gas",  tipo:"foto",  s:"s3", h:"380px", w:"100%", d:"Semana 3 · Ahorro Energético — Cocinar con tapa para ahorrar gas y energía." },
+  19: { t:"Juegos en Familia",        corto:"Menos TV, más juegos juntos",      tipo:"foto",  s:"s3", h:"380px", w:"100%", fit:"cover", d:"Semana 3 · Ahorro Energético — Reducir el uso del televisor y optar por juegos en familia." },
+  20: { t:"Cocina con Tapa",          corto:"Tapa las ollas para ahorrar gas",  tipo:"foto",  s:"s3", h:"380px", w:"100%", fit:"cover", d:"Semana 3 · Ahorro Energético — Cocinar con tapa para ahorrar gas y energía." },
   21: { t:"Plancha Inteligente",      corto:"Plancha varias prendas de una",    tipo:"texto", s:"s3", c:"👕 Planchar varias prendas a la vez para evitar gastar energía en encender la plancha muchas veces. ¡Organiza tu ropa y plancha todo de una sola vez, Sara Sofía!", d:"Semana 3 · Ahorro Energético" },
-  22: { t:"Planta un Árbol",          corto:"Siembra vida en tu comunidad",     tipo:"foto",  s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Plantar un árbol o una planta en casa o en la comunidad." },
+  22: { t:"Planta un Árbol",          corto:"Siembra vida en tu comunidad",     tipo:"foto",  s:"s4", h:"380px", w:"100%", fit:"cover", d:"Semana 4 · Conexión con la Naturaleza — Plantar un árbol o una planta en casa o en la comunidad." },
   23: { t:"Caminata Ecológica",       corto:"Camina y recoge basura",           tipo:"video", s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Hacer una caminata ecológica y recoger basura en el camino." },
-  24: { t:"Observa las Aves",         corto:"Aprende sobre las aves locales",   tipo:"foto",  s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Observar aves en el entorno y aprender sobre su importancia." },
-  25: { t:"Espacio Verde",            corto:"Crea un rincón verde en casa",     tipo:"foto",  s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Crear un espacio verde en casa con plantas nativas." },
+  24: { t:"Observa las Aves",         corto:"Aprende sobre las aves locales",   tipo:"foto",  s:"s4", h:"380px", w:"100%", fit:"cover", d:"Semana 4 · Conexión con la Naturaleza — Observar aves en el entorno y aprender sobre su importancia." },
+  25: { t:"Espacio Verde",            corto:"Crea un rincón verde en casa",     tipo:"foto",  s:"s4", h:"380px", w:"100%", fit:"cover", d:"Semana 4 · Conexión con la Naturaleza — Crear un espacio verde en casa con plantas nativas." },
   26: { t:"Menos Papel",              corto:"Escribe por ambos lados",          tipo:"texto", s:"s4", c:"📄 Usar menos papel: escribir por ambos lados o reutilizar hojas. Un árbol produce solo unos 8.000 folios. ¡Cada hoja que ahorras es un pedacito de árbol que salvas, Sara Sofía!", d:"Semana 4 · Conexión con la Naturaleza" },
-  27: { t:"Movilidad Verde",          corto:"Camina o usa bicicleta hoy",       tipo:"foto",  s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Reducir el uso del carro o moto y optar por caminar o usar bicicleta." },
+  27: { t:"Movilidad Verde",          corto:"Camina o usa bicicleta hoy",       tipo:"foto",  s:"s4", h:"380px", w:"100%", fit:"cover", d:"Semana 4 · Conexión con la Naturaleza — Reducir el uso del carro o moto y optar por caminar o usar bicicleta." },
   28: { t:"Desconexión Digital",      corto:"Menos pantallas, más energía",     tipo:"texto", s:"s4", c:"📵 Intentar disminuir el uso de dispositivos electrónicos para ahorrar energía. Los centros de datos consumen más electricidad que algunos países. ¡Cada hora sin pantalla cuenta, Sara Sofía!", d:"Semana 4 · Conexión con la Naturaleza" },
   29: { t:"Charla Familiar",          corto:"Comparte lo aprendido en familia", tipo:"video", s:"s4", h:"380px", w:"100%", d:"Semana 4 · Conexión con la Naturaleza — Compartir en familia una charla sobre lo aprendido en estos 30 días." },
   30: { t:"Reflexión Final 🏆",       corto:"¡30 días de planeta cumplidos!",   tipo:"texto", s:"s4", c:"🎉🌿 ¡FELICITACIONES, Sara Sofía! Hoy haces una reflexión escrita sobre la experiencia y te comprometes con un hábito sostenible a largo plazo. Completaste los 30 días por el planeta. ¡El mundo es mejor contigo en él! 🌍💚", d:"Semana 4 · Conexión con la Naturaleza · ¡Día final!" }
@@ -615,8 +615,9 @@ function abrirModal(d) {
     const src = original ? original.src : '';
     const h = dato.h || '380px';
     const w = dato.w || '100%';
+    const fit = dato.fit || 'cover'; /* cover = recorta y llena | contain = muestra completa */
     cuerpo.innerHTML = src
-      ? `<img src="${src}" class="modal-img" alt="Día ${d}" style="width:${w};max-height:${h};object-fit:cover;border-radius:16px;border:3px solid var(--verde-menta);">`
+      ? `<img src="${src}" class="modal-img" alt="Día ${d}" style="width:${w};max-height:${h};object-fit:${fit};border-radius:16px;border:3px solid var(--verde-menta);background:#f0faf4;">`
       : `<div class="sin-internet"><div class="ico">📷</div><div>Agrega <strong>assets/${d}.jpg</strong> a la carpeta assets</div></div>`;
 
   } else if(dato.tipo==='video'){
