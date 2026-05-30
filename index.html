@@ -46,23 +46,23 @@
 <!-- IMÁGENES Y VIDEOS PRECARGADOS — igual que LiveDog -->
 <!-- Están ocultos desde el inicio, se muestran al hacer clic en el día -->
 <div id="media-precargado" style="display:none">
-  <img id="img-1"  src="assets/1.jpeg"  alt="Día 1">
+  <img id="img-1"  src="assets/1.jpg"  alt="Día 1">
   <video id="vid-2"  src="assets/2.mp4"  preload="metadata"></video>
   <video id="vid-4"  src="assets/4.mp4"  preload="metadata"></video>
   <video id="vid-5"  src="assets/5.mp4"  preload="metadata"></video>
   <video id="vid-7"  src="assets/7.mp4"  preload="metadata"></video>
-  <img id="img-8"  src="assets/8.jpeg"  alt="Día 8">
-  <img id="img-10" src="assets/10.jpeg" alt="Día 10">
-  <img id="img-11" src="assets/11.jpeg" alt="Día 11">
+  <img id="img-8"  src="assets/8.jpg"  alt="Día 8">
+  <img id="img-10" src="assets/10.jpg" alt="Día 10">
+  <img id="img-11" src="assets/11.jpg" alt="Día 11">
   <video id="vid-12" src="assets/12.mp4" preload="metadata"></video>
-  <img id="img-13" src="assets/13.jpeg" alt="Día 13">
-  <img id="img-19" src="assets/19.jpeg" alt="Día 19">
-  <img id="img-20" src="assets/20.jpeg" alt="Día 20">
-  <img id="img-22" src="assets/22.jpeg" alt="Día 22">
+  <img id="img-13" src="assets/13.jpg" alt="Día 13">
+  <img id="img-19" src="assets/19.jpg" alt="Día 19">
+  <img id="img-20" src="assets/20.jpg" alt="Día 20">
+  <img id="img-22" src="assets/22.jpg" alt="Día 22">
   <video id="vid-23" src="assets/23.mp4" preload="metadata"></video>
-  <img id="img-24" src="assets/24.jpeg" alt="Día 24">
-  <img id="img-25" src="assets/25.jpeg" alt="Día 25">
-  <img id="img-27" src="assets/27.jpeg" alt="Día 27">
+  <img id="img-24" src="assets/24.jpg" alt="Día 24">
+  <img id="img-25" src="assets/25.jpg" alt="Día 25">
+  <img id="img-27" src="assets/27.jpg" alt="Día 27">
   <video id="vid-29" src="assets/29.mp4" preload="metadata"></video>
 </div>
 
@@ -618,7 +618,7 @@ function abrirModal(d) {
     const fit = dato.fit || 'cover';
     const pos = dato.pos || 'center';
     cuerpo.innerHTML = src
-      ? `<img src="${src}" class="modal-img" alt="Día ${d}" style="width:${w};max-height:${h};object-fit:${fit};object-position:${pos};border-radius:16px;border:3px solid var(--verde-menta);background:#f0faf4;">`
+      ? `<img src="${src}" class="modal-img media-entrada" alt="Día ${d}" style="width:${w};max-height:${h};object-fit:${fit};object-position:${pos};border-radius:16px;border:3px solid var(--verde-menta);background:#f0faf4;">`
       : `<div class="sin-internet"><div class="ico">📷</div><div>Agrega <strong>assets/${d}.jpg</strong> a la carpeta assets</div></div>`;
 
   } else if(dato.tipo==='video'){
@@ -627,7 +627,7 @@ function abrirModal(d) {
     const h = dato.h || '380px';
     const w = dato.w || '100%';
     cuerpo.innerHTML = src
-      ? `<video src="${src}" class="modal-img" controls style="width:${w};max-height:${h};background:#000;border-radius:16px;border:3px solid var(--verde-menta);"></video>`
+      ? `<video src="${src}" class="modal-img media-entrada" controls style="width:${w};max-height:${h};background:#000;border-radius:16px;border:3px solid var(--verde-menta);"></video>`
       : `<div class="sin-internet"><div class="ico">🎬</div><div>Agrega <strong>assets/${d}.mp4</strong> a la carpeta assets</div></div>`;
 
   } else {
