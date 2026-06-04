@@ -46,24 +46,15 @@
 <!-- IMÁGENES Y VIDEOS PRECARGADOS — igual que LiveDog -->
 <!-- Están ocultos desde el inicio, se muestran al hacer clic en el día -->
 <div id="media-precargado" style="display:none">
-  <img id="img-1"  src="assets/1.jpeg"  alt="Día 1">
-  <img id="img-2"  src="assets/2.jpeg"  alt="Día 2">   
-  <video id="vid-4"  src="assets/4.mp4"  preload="metadata"></video>
-  <video id="vid-5"  src="assets/5.mp4"  preload="metadata"></video>
-  <video id="vid-7"  src="assets/7.mp4"  preload="metadata"></video>
-  <img id="img-8"  src="assets/8.jpeg"  alt="Día 8">
-  <img id="img-10" src="assets/10.jpeg" alt="Día 10">
-  <img id="img-11" src="assets/11.jpeg" alt="Día 11">
-  <video id="vid-12" src="assets/12.mp4" preload="metadata"></video>
-  <img id="img-13" src="assets/13.jpeg" alt="Día 13">
-  <img id="img-19" src="assets/19.jpeg" alt="Día 19">
-  <img id="img-20" src="assets/20.jpeg" alt="Día 20">
-  <img id="img-22" src="assets/22.jpeg" alt="Día 22">
-  <video id="vid-23" src="assets/23.mp4" preload="metadata"></video>
-  <img id="img-24" src="assets/24.jpeg" alt="Día 24">
-  <img id="img-25" src="assets/25.jpeg" alt="Día 25">
-  <img id="img-27" src="assets/27.jpeg" alt="Día 27">
-  <video id="vid-29" src="assets/29.mp4" preload="metadata"></video>
+  <img id="img-1"  src="assets/1.jpg"  alt="Día 1">
+  <img id="img-2"  src="assets/2.jpg"  alt="Día 2">
+  <img id="img-8"  src="assets/8.jpg"  alt="Día 8">
+  <img id="img-10" src="assets/10.jpg" alt="Día 10">
+  <img id="img-13" src="assets/13.jpg" alt="Día 13">
+  <img id="img-20" src="assets/20.jpg" alt="Día 20">
+  <img id="img-22" src="assets/22.jpg" alt="Día 22">
+  <img id="img-25" src="assets/25.jpg" alt="Día 25">
+  <img id="img-27" src="assets/27.jpg" alt="Día 27">
 </div>
 
 <!-- ANIMALITOS DECORATIVOS FIJOS -->
@@ -475,6 +466,37 @@ function lanzarConfeti(x,y) {
 
 /* ══ DATOS ══ */
 const DATOS = {
+  1:  { t:"Cerrar la llave",          corto:"Ahorra agua al cepillarte",        tipo:"foto",  s:"s1", h:"380px", w:"100%", fit:"cover", pos:"center", d:"Semana 1 · Ahorro de Agua" },
+  2:  { t:"Agua Lluvia",              corto:"Recolecta agua lluvia",             tipo:"foto",  s:"s1", h:"380px", w:"100%", fit:"cover", pos:"center", d:"Semana 1 · Ahorro de Agua" },
+  3:  { t:"Ducha de 5 Minutos",       corto:"Reduce tu ducha a 5 min",          tipo:"texto", s:"s1", c:"🚿 Hoy me propuse ducharme en solo 5 minutos. Al principio me pareció muy poco tiempo, pero puse una canción de fondo y me organicé mejor. ¡Lo logré! Sentí que de verdad estaba cuidando el agua de mi planeta.", d:"Semana 1 · Ahorro de Agua" },
+  4:  { t:"Lavar sin Grifo",          corto:"Lava frutas en un recipiente",     tipo:"texto", s:"s1", c:"🥦 Le pedí ayuda a mi mamá y juntas lavamos las frutas y verduras en un recipiente con agua en lugar de hacerlo con el grifo abierto. Fue curioso ver cuánta agua ahorramos. ¡Pequeños gestos, grandes cambios!", d:"Semana 1 · Ahorro de Agua" },
+  5:  { t:"Agua Reutilizada",         corto:"Reutiliza el agua del lavado",     tipo:"texto", s:"s1", c:"👕 Después de que mi mamá lavó la ropa, guardamos el agua en un balde y la usamos para trapear el piso y regar las plantas del patio. Antes esa agua simplemente se iba por el desagüe. ¡Ya no más desperdicio en mi casa!", d:"Semana 1 · Ahorro de Agua" },
+  6:  { t:"Caza Fugas",               corto:"Revisa fugas de agua en casa",     tipo:"texto", s:"s1", c:"🔧 Revisé toda la casa buscando fugas de agua. Encontré una llave del baño que goteaba muy poquito, pero al investigar aprendí que una fuga así puede desperdiciar hasta 30 litros al día. Le avisé a mi familia y la arreglamos.", d:"Semana 1 · Ahorro de Agua" },
+  7:  { t:"Riego Inteligente",        corto:"Riega en la mañana o noche",       tipo:"texto", s:"s1", c:"🌺 Hoy regué las plantas bien temprano en la mañana antes de que saliera el sol. Mi abuela me enseñó que si las riegas al mediodía, el agua se evapora rápido y las plantas no aprovechan. ¡Aprendí algo nuevo y cuide el agua al mismo tiempo!", d:"Semana 1 · Ahorro de Agua" },
+  8:  { t:"Separa Residuos",          corto:"Clasifica la basura en casa",      tipo:"foto",  s:"s2", h:"380px", w:"100%", fit:"cover", pos:"center", d:"Semana 2 · Reducción de Residuos" },
+  9:  { t:"No al Plástico",           corto:"Evita empaques innecesarios",      tipo:"texto", s:"s2", c:"🚫 Fui al mercado con mi mamá y estuve muy pendiente de evitar productos con empaques plásticos innecesarios. Elegimos frutas sueltas en lugar de las empacadas. Fue difícil porque casi todo viene en plástico, pero encontramos alternativas. ¡Vale la pena intentarlo!", d:"Semana 2 · Reducción de Residuos" },
+  10: { t:"Reutiliza Frascos",        corto:"Segunda vida a los frascos",       tipo:"foto",  s:"s2", h:"380px", w:"100%", fit:"cover", pos:"center", d:"Semana 2 · Reducción de Residuos" },
+  11: { t:"Manualidad Reciclada",     corto:"Crea algo con materiales viejos",  tipo:"texto", s:"s2", c:"🎨 Hice una maceta con una botella plástica que iba a tirar. La decoré con pintura y le planté una semillita. Quedó muy bonita y ahora está en mi cuarto. Me di cuenta de que la basura puede convertirse en algo hermoso si le ponemos creatividad.", d:"Semana 2 · Reducción de Residuos" },
+  12: { t:"Bolsa Reutilizable",       corto:"Lleva tu bolsa al mercado",        tipo:"texto", s:"s2", c:"🛍️ Salí a hacer un mandado con mi bolsa de tela en lugar de pedir bolsa plástica en la tienda. Al principio me daba pena, pero luego me sentí orgullosa. La señora de la tienda me dijo que ojalá más personas hicieran lo mismo. ¡Eso me motivó mucho!", d:"Semana 2 · Reducción de Residuos" },
+  13: { t:"Tapitas por el Planeta",   corto:"Recoge tapitas para donar",        tipo:"foto",  s:"s2", h:"380px", w:"100%", fit:"cover", pos:"center", d:"Semana 2 · Reducción de Residuos" },
+  14: { t:"Comida sin Residuos",      corto:"Prepara comida sin plástico",      tipo:"texto", s:"s2", c:"🍽️ Ayudé a preparar el almuerzo usando solo ingredientes frescos sin empaques desechables. Hicimos sopa de verduras con productos del mercado. No generamos ni una bolsa plástica. Mi mamá dijo que así cocinaban antes y que es mucho más rico y saludable.", d:"Semana 2 · Reducción de Residuos" },
+  15: { t:"Apaga las Luces",          corto:"Apaga luces cuando no se usen",    tipo:"texto", s:"s3", c:"💡 ¡Llevo 15 días de compromisos verdes! Hoy me enfoqué en apagar las luces cada vez que salía de un cuarto. Le puse un papel en cada interruptor que decía '¿Ya apagaste?' para recordarme. Mi papá me dijo que notó la diferencia en el ambiente de la casa.", d:"Semana 3 · Ahorro Energético" },
+  16: { t:"Desconecta Cargadores",    corto:"Desconecta lo que no usas",        tipo:"texto", s:"s3", c:"🔌 Descubrí que los cargadores conectados sin usar siguen gastando energía aunque no estén cargando nada. Se llama 'energía fantasma'. Hoy desconecté todos los cargadores y electrodomésticos que no estábamos usando. ¡Mi familia quedó sorprendida con ese dato!", d:"Semana 3 · Ahorro Energético" },
+  17: { t:"Luz Natural",              corto:"Usa la luz del sol al máximo",     tipo:"texto", s:"s3", c:"☀️ Abrí todas las cortinas de la casa para aprovechar la luz natural del sol todo el día. Estudié, desayuné y pasé la tarde sin encender ninguna bombilla. La casa se sentía más alegre y viva con la luz del sol entrando. ¡La naturaleza nos da todo gratis!", d:"Semana 3 · Ahorro Energético" },
+  18: { t:"Nevera Inteligente",       corto:"No abras la nevera sin necesidad", tipo:"texto", s:"s3", c:"🧊 Me propuse no abrir la nevera sin tener claro qué iba a buscar. Antes la abría y me quedaba mirando sin saber qué quería. Hoy planifiqué mis meriendas antes de abrir. Mi mamá me dijo que eso también ayuda a ahorrar en la factura de la luz.", d:"Semana 3 · Ahorro Energético" },
+  19: { t:"Juegos en Familia",        corto:"Menos TV, más juegos juntos",      tipo:"texto", s:"s3", c:"🎲 En lugar de ver televisión toda la tarde, propuse jugar parqués en familia. ¡Fue genial! Nos reímos muchísimo y no usamos ningún aparato eléctrico por horas. Mi hermanito dijo que quería hacerlo todos los días. A veces lo mejor no necesita electricidad.", d:"Semana 3 · Ahorro Energético" },
+  20: { t:"Cocina con Tapa",          corto:"Tapa las ollas para ahorrar gas",  tipo:"foto",  s:"s3", h:"380px", w:"100%", fit:"cover", pos:"center", d:"Semana 3 · Ahorro Energético" },
+  21: { t:"Plancha Inteligente",      corto:"Plancha varias prendas de una",    tipo:"texto", s:"s3", c:"👕 Junté toda la ropa que necesitaba planchar durante la semana y la planché toda de una sola vez. Mi mamá me explicó que calentar la plancha gasta mucha energía, así que hacerlo una sola vez ahorra bastante. ¡Organización y ahorro al mismo tiempo!", d:"Semana 3 · Ahorro Energético" },
+  22: { t:"Planta un Árbol",          corto:"Siembra vida en tu comunidad",     tipo:"foto",  s:"s4", h:"380px", w:"100%", fit:"cover", pos:"center", d:"Semana 4 · Conexión con la Naturaleza" },
+  23: { t:"Caminata Ecológica",       corto:"Camina y recoge basura",           tipo:"texto", s:"s4", c:"🚶‍♀️ Salí a caminar por mi barrio con una bolsa y recogí toda la basura que encontré en el camino. Llené casi media bolsa en solo dos cuadras. Me dio tristeza ver tanta basura, pero también me sentí poderosa haciendo algo al respecto. ¡El cambio empieza en casa!", d:"Semana 4 · Conexión con la Naturaleza" },
+  24: { t:"Observa las Aves",         corto:"Aprende sobre las aves locales",   tipo:"texto", s:"s4", c:"🐦 Me senté en el patio muy quieta y estuve observando las aves que llegaban. Identifiqué tres especies diferentes con ayuda de mi mamá. Busqué información sobre cada una y aprendí qué comen y dónde viven. Las aves son indicadores de la salud del ambiente.", d:"Semana 4 · Conexión con la Naturaleza" },
+  25: { t:"Espacio Verde",            corto:"Crea un rincón verde en casa",     tipo:"foto",  s:"s4", h:"380px", w:"100%", fit:"cover", pos:"center", d:"Semana 4 · Conexión con la Naturaleza" },
+  26: { t:"Menos Papel",              corto:"Escribe por ambos lados",          tipo:"texto", s:"s4", c:"📄 Revisé mis cuadernos y encontré muchas hojas usadas solo por un lado. Hoy empecé a usar esas hojas por el otro lado para hacer apuntes. También le pedí a mis compañeros que hicieran lo mismo. Un árbol produce solo unos 8.000 folios, ¡hay que cuidarlos!", d:"Semana 4 · Conexión con la Naturaleza" },
+  27: { t:"Movilidad Verde",          corto:"Camina o usa bicicleta hoy",       tipo:"foto",  s:"s4", h:"380px", w:"100%", fit:"cover", pos:"center", d:"Semana 4 · Conexión con la Naturaleza" },
+  28: { t:"Desconexión Digital",      corto:"Menos pantallas, más vida",        tipo:"texto", s:"s4", c:"📵 Hoy pasé varias horas sin celular ni computador. Al principio me sentí rara sin saber qué hacer, pero luego leí un libro, ayudé en casa y salí a jugar. Me di cuenta de que dependo demasiado de las pantallas. ¡El planeta y yo necesitábamos ese descanso!", d:"Semana 4 · Conexión con la Naturaleza" },
+  29: { t:"Charla Familiar",          corto:"Comparte lo aprendido en familia", tipo:"texto", s:"s4", c:"👨‍👩‍👧 Esta noche en la cena compartí con toda mi familia todo lo que aprendí durante estos 30 días. Les hablé del agua, la energía, los residuos y la naturaleza. Mi papá dijo que no sabía muchas de esas cosas. Nos comprometimos juntos a seguir con estos hábitos. ¡El planeta nos necesita unidos!", d:"Semana 4 · Conexión con la Naturaleza" },
+  30: { t:"Reflexión Final 🏆",       corto:"¡30 días de planeta cumplidos!",   tipo:"texto", s:"s4", c:"🌍💚 Completé los 30 días por el planeta. Fue un mes lleno de aprendizaje, esfuerzo y mucho amor por la naturaleza. Aprendí que los pequeños gestos diarios sí hacen la diferencia. Me comprometo a seguir con estos hábitos toda la vida. ¡Soy una Guardiana Verde y estoy orgullosa de serlo! 🌱🏆", d:"Semana 4 · Conexión con la Naturaleza · ¡Día final!" }
+};
   1:  { t:"Cerrar la llave",          corto:"Ahorra agua al cepillarte",        tipo:"foto",  s:"s1", h:"380px", w:"100%", fit:"cover", d:"Semana 1 · Ahorro de Agua" },
   2:  { t:"Agua Lluvia",              corto:"Recolecta agua lluvia",             tipo:"video", s:"s1", h:"380px", w:"100%", d:"Semana 1 · Ahorro de Agua — Recolectar agua lluvia para regar las plantas." },
   3:  { t:"Ducha de 5 Minutos",       corto:"Reduce tu ducha a 5 min",          tipo:"texto", s:"s1", c:"🚿 Reducir el tiempo de la ducha a 5 minutos. Cada minuto de ducha gasta hasta 10 litros de agua. ¡Con este compromiso puedes ahorrar decenas de litros cada día, Sara Sofía!", d:"Semana 1 · Ahorro de Agua" },
